@@ -1,4 +1,5 @@
-# wechaty-electron [![Linux Build Status](https://travis-ci.org/zixia/wechaty-electron.svg?branch=master)](https://travis-ci.org/zixia/wechaty-electron) [![Win32 Build status](https://ci.appveyor.com/api/projects/status/60fgkemki7e6upb9?svg=true)](https://ci.appveyor.com/project/zixia/wechaty-electron)
+# wechaty-electron [![Linux Build Status](https://travis-ci.org/zixia/wechaty-electron.svg?branch=master)](https://travis-ci.org/zixia/wechaty-electron) [![Win32 Build status](https://ci.appveyor.com/api/projects/status/cu1nxdheb5r1ohk9?svg=true)](https://ci.appveyor.com/project/zixia/wechaty-electron)
+
 Wechaty on Your Desktop
 
 Executable for Windows / Mac / Linux
@@ -7,16 +8,17 @@ Executable for Windows / Mac / Linux
 
 [![Join the chat at https://gitter.im/zixia/wechaty](https://badges.gitter.im/zixia/wechaty.svg)](https://gitter.im/zixia/wechaty?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
+# Install
+
+# Usage
 
 # Test
-Wechaty use [TAP protocol](http://testanything.org/) to test itself by [tap](http://www.node-tap.org/).
+Wechaty use AVA as test runner.
 
-To test Wechaty, run:
+To test Wechaty-Electron, run:
 ```shell
 npm test
 ```
-
-Know more about TAP: [Why I use Tape Instead of Mocha & So Should You](https://medium.com/javascript-scene/why-i-use-tape-instead-of-mocha-so-should-you-6aa105d8eaf4#.qxrrf2938)
 
 # Version History
 
