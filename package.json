@@ -1,0 +1,31 @@
+{
+  "name": "wechaty-electron",
+  "version": "0.0.1",
+  "description": "Wechaty on Your Desktop",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zixia/wechaty-electron.git"
+  },
+  "keywords": [
+    "wechaty",
+    "wechat",
+    "chatbot",
+    "bot",
+    "botie",
+    "electron"
+  ],
+  "author": "Zhuohuan LI <zixia@zixia.net>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/zixia/wechaty-electron/issues"
+  },
+  "homepage": "https://github.com/zixia/wechaty-electron#readme",
+  "devDependencies": {
+    "electron-prebuilt": "^1.2.0"
+  }
+}
