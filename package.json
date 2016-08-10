@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "electron .",
-    "test": "echo test"
+    "test": "echo test",
+    "release": "echo release",
+    "dist": "echo dist"
   },
   "repository": {
     "type": "git",
