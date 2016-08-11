@@ -1,8 +1,6 @@
 # wechaty-electron [![Linux Build Status](https://travis-ci.org/zixia/wechaty-electron.svg?branch=master)](https://travis-ci.org/zixia/wechaty-electron) [![Win32 Build status](https://ci.appveyor.com/api/projects/status/cu1nxdheb5r1ohk9?svg=true)](https://ci.appveyor.com/project/zixia/wechaty-electron)
 
-Wechaty on Your Desktop
-
-Executable for Windows / Mac / Linux
+Wechaty Desktop Executable for Windows / Mac / Linux
 
 > Wechaty is Wechaty for Bot.
 
