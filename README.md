@@ -8,7 +8,11 @@ Wechaty Desktop Executable for Windows / Mac / Linux
 
 # Install
 
+TBW
+
 # Usage
+
+TBW
 
 # Test
 Wechaty use AVA as test runner.
@@ -38,7 +42,7 @@ Zhuohuan LI <zixia@zixia.net> (http://linkedin.com/in/zixia)
 Copyright & License
 -------------------
 * Code & Docs 2016© zixia
-* Code released under the ISC license
+* Code released under the Apache-2.0 license
 * Docs released under Creative Commons
 
 
