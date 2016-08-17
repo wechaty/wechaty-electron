@@ -1,14 +1,8 @@
 {
-  "name": "wechaty-electron",
+  "name": "wechaty-epp",
   "version": "0.0.1",
   "description": "Wechaty on Your Desktop",
   "main": "main.js",
-  "scripts": {
-    "start": "electron --dev --debug=5858 ./app/",
-    "test": "echo test",
-    "release": "echo release",
-    "dist": "echo dist"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zixia/wechaty-electron.git"
@@ -27,7 +21,8 @@
     "url": "https://github.com/zixia/wechaty-electron/issues"
   },
   "homepage": "https://github.com/zixia/wechaty-electron#readme",
-  "devDependencies": {
-    "electron-prebuilt": "^1.2.0"
+  "dependencies": {
+    "brolog": "^0.3.7",
+    "wechaty": "^0.3.9"
   }
 }

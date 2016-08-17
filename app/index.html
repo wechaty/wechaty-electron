@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+    <!-- All of the Node.js APIs are available in this renderer process. -->
+    We are using node <script>document.write(process.versions.node)</script>,
+    Chromium <script>document.write(process.versions.chrome)</script>,
+    and Electron <script>document.write(process.versions.electron)</script>.
+  </body>
+
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+  </script>
+
+  <script type='text/javascript' src="http://www.botlibre.com/scripts/sdk.js"></script>
+  <script type='text/javascript'>
+    SDK.applicationId = "1046027804277920127";
+    var sdk = new SDKConnection();
+    var web = new WebAvatar();
+    web.connection = sdk;
+    web.avatar = "667642";
+    web.voice = "cmu-rms-hsmm";
+    web.nativeVoice = true;
+    web.nativeVoiceName = "Google 普通话（中国大陆）";
+    web.lang = "zh";
+    web.width = "300";
+    web.height = "300";
+    web.createBox();
+//    web.addMessage("你好，欢迎使用微信控装甲机器人。", "", "smile", "");
+    web.processMessages();
+  </script>
+
+</html>
