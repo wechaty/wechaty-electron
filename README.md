@@ -31,6 +31,11 @@ npm test
 
 - [ ] Wechaty + Electron Executable
 
+# Reference
+
+* [Two package structure example](http://stackoverflow.com/a/37259088/1123955)
+* [Loading App Dependencies Manually](https://github.com/electron-userland/electron-builder/wiki/Loading-App-Dependencies-Manually)
+
 Author
 -----------------
 Zhuohuan LI <zixia@zixia.net> (http://linkedin.com/in/zixia)
