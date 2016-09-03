@@ -12,7 +12,7 @@ brolog.info('Wechaty', 'Wechaty EPP Works!')
 
 
 const ioBot = new IoBot({
-  token: token
+  token: 'EPP'
   , log: brolog
 })
 
@@ -20,7 +20,6 @@ ioBot.init()
     .then(_ => brolog.verbose('startIoBot()', 'init-ed'))
     .catch(e => {
       brolog.error('Bot', 'init() fail: %s', e)
-      ioBot.quit()
       throw e
       // process.exit(-1)
     })

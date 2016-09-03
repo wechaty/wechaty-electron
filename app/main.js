@@ -7,7 +7,7 @@
  *
  */
 const {
-  browserWindow
+  BrowserWindow
   , app
 } = require('electron')
 
