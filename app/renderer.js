@@ -1,27 +1,26 @@
-var fs = require('fs')
-var file = fs.readFileSync('./app/package.json')
-document.write(file)
+// const fs = require('fs')
 
-startIoBot()
+const Brolog = require('brolog')
+const brolog = Brolog('SILLY')
 
-function startIoBot() {
-  const Brolog = require('brolog')
-  const brolog = Brolog('SILLY')
+const { IoBot } = require('wechaty')
 
-  const IoBot = require('wechaty').IoBot
+// document.write(file)
 
-  const ioBot = new IoBot({
-    profile: 'wechaty-epp'
-    , head: 'chrome'
-    , token: 'EPP'
-    , log: brolog
-  })
 
-  return ioBot.init()
-      .then(_ => brolog.verbose('startIoBot()', 'init-ed'))
-      .catch(e => {
-        brolog.error('Bot', 'init() fail: %s', e)
-        ioBot.quit()
-        // process.exit(-1)
-      })
-}
+brolog.info('Wechaty', 'Wechaty EPP Works!')
+
+
+const ioBot = new IoBot({
+  token: token
+  , log: brolog
+})
+
+ioBot.init()
+    .then(_ => brolog.verbose('startIoBot()', 'init-ed'))
+    .catch(e => {
+      brolog.error('Bot', 'init() fail: %s', e)
+      ioBot.quit()
+      throw e
+      // process.exit(-1)
+    })

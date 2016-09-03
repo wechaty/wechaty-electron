@@ -1,12 +1,19 @@
-
-const electron  = require('electron')
-const app       = electron.app
-
-const BrowserWindow = electron.BrowserWindow
+/**
+ * Wechaty - Wechat for Bot
+ *
+ * https://github.com/wechaty/wechaty
+ *
+ * Electron Main
+ *
+ */
+const {
+  browserWindow
+  , app
+} = require('electron')
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
-let mainWindow
+let mainWindow = null
 
 function createWindow () {
   mainWindow = new BrowserWindow({width: 800, height: 600})
@@ -55,8 +62,7 @@ app.on('activate', function () {
 
 // spawnWechaty()
 
-
-var path = require('path');
+var path = require('path')
 
 var devMode = (process.argv || []).indexOf('--dev') !== -1
 
@@ -64,6 +70,10 @@ if (devMode) {
   console.log('devMode!!!!!!!!!!!!!!')
   // load the app dependencies
   var PATH_APP_NODE_MODULES = path.join(__dirname, 'node_modules')
-  console.log(PATH_APP_NODE_MODULES)
   require('module').globalPaths.push(PATH_APP_NODE_MODULES)
+
+  const PATH_APP_NODE_MODULES_BIN = path.join(__dirname, 'node_modules/.bin')
+  process.env.PATH = process.env.PATH + ':' + PATH_APP_NODE_MODULES_BIN
 }
+
+
