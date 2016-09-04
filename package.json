@@ -4,7 +4,7 @@
   "description": "Wechaty Desktop",
   "main": "main.js",
   "scripts": {
-    "start": "electron --dev --debug=5858 ./app/",
+    "start": "electron --dev --debug=5858 app",
     "test": "echo test",
     "release": "echo release",
     "dist": "echo dist"
