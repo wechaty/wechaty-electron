@@ -1,7 +1,7 @@
 /**
- * Wechaty - Wechat for Bot
+ * Wechaty - Wechat for Bot, Connecting ChatBots. Chat as a Service
  *
- * https://github.com/wechaty/wechaty
+ * https://github.com/wechaty
  *
  * Electron Main
  *
@@ -54,14 +54,9 @@ app.on('activate', function () {
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
 
-// function spawnWechaty() {
-//   var io = require('child_process').spawn('node', ['app/node_modules/.bin/io-bot'])
-//   io.stdout.on('data', data => console.log('stdout: ' + data))
-//   io.stderr.on('data', data => console.error('stderr: ' + data))
-// }
-
-// spawnWechaty()
-
+/**
+ * add node_modules search directory for app
+ */
 var path = require('path')
 
 var devMode = (process.argv || []).indexOf('--dev') !== -1

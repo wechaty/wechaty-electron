@@ -3,23 +3,23 @@
 const Brolog = require('brolog')
 const brolog = Brolog('SILLY')
 
-const { IoBot } = require('wechaty')
+const { IoClient } = require('wechaty')
 
 // document.write(file)
 
 
-brolog.info('Wechaty', 'Wechaty EPP Works!')
+brolog.info('Wechaty', 'Wechaty EPP starting...')
 
 
-const ioBot = new IoBot({
+const client = new IoClient({
   token: 'EPP'
   , log: brolog
 })
 
-ioBot.init()
+client.init()
     .then(_ => brolog.verbose('startIoBot()', 'init-ed'))
     .catch(e => {
-      brolog.error('Bot', 'init() fail: %s', e)
+      brolog.error('Bot', 'init() fail: %s', e.message)
       throw e
       // process.exit(-1)
     })
