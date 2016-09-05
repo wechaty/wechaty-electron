@@ -23,6 +23,7 @@
   "homepage": "https://github.com/zixia/wechaty-electron#readme",
   "dependencies": {
     "brolog": "^0.3.7",
+    "jquery": "^3.1.0",
     "wechaty": "^0.3.9"
   }
 }
