@@ -42,6 +42,7 @@
   <script>
     const Brolog = require('brolog')
     const brolog = Brolog('SILLY')
+    const { IoClient } = require('wechaty')
     const {
       BrowserWindow
       , app
@@ -51,7 +52,20 @@
     const AppMenu = require('./app-menu')
     const AppTray = require('./app-tray')
 
-    const client = require('./wechaty-client.js')
+    brolog.info('Wechaty', 'Wechaty EPP starting...')
+
+    const client = new IoClient({
+      token: 'EPP'
+      , log: brolog
+    })
+
+    client.init()
+          .then(_ => brolog.verbose('startIoBot()', 'init-ed'))
+          .catch(e => {
+            brolog.error('Bot', 'init() fail: %s', e.message)
+            throw e
+            // process.exit(-1)
+          })
 
     const win = BrowserWindow.getFocusedWindow()
     const menu = new AppMenu()
@@ -77,6 +91,7 @@
       , quit: function() {
         client.quit()
               .then(_ => app.quit())
+              .catch( e => brolog.warn('Epp', 'quit() when quiting...') )
       }
     }
 
