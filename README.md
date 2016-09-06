@@ -1,10 +1,11 @@
-# wechaty-electron [![Linux Build Status](https://travis-ci.org/wechaty/wechaty-electron.svg?branch=master)](https://travis-ci.org/wechaty/wechaty-electron) [![Win32 Build status](https://ci.appveyor.com/api/projects/status/cu1nxdheb5r1ohk9?svg=true)](https://ci.appveyor.com/project/zixia/wechaty-electron)
+# wechaty-electron [![Linux/Mac Build Status](https://img.shields.io/travis/wechaty/wechaty-electron.svg?label=Linux/Mac)](https://travis-ci.org/wechaty/wechaty-electron) [![Win32 Build status](https://img.shields.io/appveyor/ci/zixia/wechaty-ecectron/master.svg?label=Windows)](https://ci.appveyor.com/project/zixia/wechaty-electron)
 
 Wechaty Desktop Executable for Windows / Mac / Linux
 
 > Wechaty is Wechat for Bot, Chat as a Service.
 
 [![Join the chat at https://gitter.im/zixia/wechaty](https://badges.gitter.im/zixia/wechaty.svg)](https://gitter.im/zixia/wechaty?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Powered by Wechaty](https://img.shields.io/badge/Powered%20By-Wechaty-green.svg)](https://github.com/wechaty/wechaty)
 
 # Install
 

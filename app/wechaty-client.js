@@ -1,7 +1,6 @@
 // const fs = require('fs')
 
 const Brolog = require('brolog')
-const brolog = Brolog('SILLY')
 
 const { IoClient } = require('wechaty')
 
@@ -13,7 +12,7 @@ brolog.info('Wechaty', 'Wechaty EPP starting...')
 
 const client = new IoClient({
   token: 'EPP'
-  , log: brolog
+  , log: Brolog
 })
 
 client.init()

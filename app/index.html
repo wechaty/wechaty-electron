@@ -35,18 +35,30 @@
 
     <button id="save">Save & (Re-)Start</button>
     <button id="quit">Quit</button>
-    <button id="hide">Hide Window</button>
+    <button id="toggle">Hide/Show Window</button>
 
   </body>
 
   <script>
+    const Brolog = require('brolog')
+    const brolog = Brolog('SILLY')
     const {
       BrowserWindow
       , app
     } = require('electron').remote
 
     // You can also require other files to run in this process
+    const AppMenu = require('./app-menu')
+    const AppTray = require('./app-tray')
+
     const client = require('./wechaty-client.js')
+
+    const win = BrowserWindow.getFocusedWindow()
+    const menu = new AppMenu()
+    const tray = new AppTray({
+      window: win
+      , log: brolog
+    })
 
     const Epp = {
       save: function() {
@@ -55,19 +67,26 @@
         client.token(token)
         client.restart()
       }
-      , hide: function() {
-        BrowserWindow.getFocusedWindow().hide()
+      , toggleVisible: function() {
+        if (win.isVisible()) {
+          win.hide()
+        } else {
+          win.show()
+        }
       }
       , quit: function() {
         client.quit()
-              // .then(_ => app.quit())
+              .then(_ => app.quit())
       }
     }
 
     $(document).ready(function() {
       $('#save').click(Epp.save)
-      $('#hide').click(Epp.hide)
+      $('#toggle').click(Epp.toggleVisible)
       $('#quit').click(Epp.quit)
+
+      menu.init()
+      tray.init()
     })
 
 
