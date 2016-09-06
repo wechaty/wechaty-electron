@@ -23,3 +23,5 @@ client.init()
       throw e
       // process.exit(-1)
     })
+
+module.exports = client

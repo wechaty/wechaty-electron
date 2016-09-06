@@ -3,6 +3,22 @@
   <head>
     <meta charset="UTF-8">
     <title>Wechaty - Desktop Manager for Chat as a Service Bot</title>
+
+    <!--
+      Solve problem caused by mixment of browser & nodejs in Electron
+      http://stackoverflow.com/a/37480521/1123955
+
+      * Works for both browser and electron with the same code
+      * Fixes issues for ALL 3rd-party libraries (not just jQuery) without having to specify each one
+    -->
+    <!-- Insert this line above script imports  -->
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+
+    <!-- Insert this line after script imports -->
+    <script>if (window.module) module = window.module;</script>
+
   </head>
   <body>
     <h1>Hello Wechaty EPP!</h1>
@@ -10,11 +26,53 @@
     We are using node <script>document.write(process.versions.node)</script>,
     Chromium <script>document.write(process.versions.chrome)</script>,
     and Electron <script>document.write(process.versions.electron)</script>.
+
+
+    <h2>Setting</h2>
+
+    <label for="token">WECHATY_TOKEN</label>
+    <input type="text" name="token" id="token">
+
+    <button id="save">Save & (Re-)Start</button>
+    <button id="quit">Quit</button>
+    <button id="hide">Hide Window</button>
+
   </body>
 
   <script>
+    const {
+      BrowserWindow
+      , app
+    } = require('electron').remote
+
     // You can also require other files to run in this process
-    require('./renderer.js')
+    const client = require('./wechaty-client.js')
+
+    const Epp = {
+      save: function() {
+        const token = $("#token").val()
+
+        client.token(token)
+        client.restart()
+      }
+      , hide: function() {
+        BrowserWindow.getFocusedWindow().hide()
+      }
+      , quit: function() {
+        client.quit()
+              // .then(_ => app.quit())
+      }
+    }
+
+    $(document).ready(function() {
+      $('#save').click(Epp.save)
+      $('#hide').click(Epp.hide)
+      $('#quit').click(Epp.quit)
+    })
+
+
+
+
   </script>
 
   <!-- script type='text/javascript' src="http://www.botlibre.com/scripts/sdk.js"></script>
