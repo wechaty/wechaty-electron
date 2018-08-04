@@ -5,7 +5,7 @@ Wechaty Desktop Executable for Windows / Mac / Linux
 > Wechaty is Wechat for Bot, Chat as a Service.
 
 [![Join the chat at https://gitter.im/zixia/wechaty](https://badges.gitter.im/zixia/wechaty.svg)](https://gitter.im/zixia/wechaty?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Powered by Wechaty](https://img.shields.io/badge/Powered%20By-Wechaty-green.svg)](https://github.com/wechaty/wechaty)
+[![Powered by Wechaty](https://img.shields.io/badge/Powered%20By-Wechaty-green.svg)](https://github.com/wechaty/wechaty) [![Greenkeeper badge](https://badges.greenkeeper.io/Chatie/wechaty-electron.svg)](https://greenkeeper.io/)
 
 # Install
 
