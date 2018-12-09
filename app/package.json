@@ -24,6 +24,6 @@
   "dependencies": {
     "brolog": "^1.8.1",
     "jquery": "^3.1.0",
-    "wechaty": "^0.18.5"
+    "wechaty": "^0.22.6"
   }
 }
